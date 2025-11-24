@@ -48,6 +48,16 @@ snprintf(), vsprintf(), and vsnprintf() write to the character string str.
 %u print an unsigned decimal (base 10) number
 %x print a number in hexidecimal (base 16)
 %% print a percent sign (\% also works)
-
-
+RETURN VALUE
+Upon successful return, these functions return the number of bytes
+printed (excluding the null byte used to end output to strings).
+The functions snprintf() and vsnprintf() do not write more than
+size bytes (including the terminating null byte ('\0')).  If the
+output was truncated due to this limit, then the return value is
+the number of characters (excluding the terminating null byte)
+which would have been written to the final string if enough space
+had been available.  Thus, a return value of size or more means
+that the output was truncated.  (See also below under CAVEATS.)
+On error, a negative value is returned, and errno is set to
+indicate the error.
 
