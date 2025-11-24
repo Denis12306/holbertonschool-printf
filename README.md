@@ -87,5 +87,3 @@ They write output to:
 ---
 
 ## ✅ End of README
-You can now copy‑paste this file directly into your project.
-
