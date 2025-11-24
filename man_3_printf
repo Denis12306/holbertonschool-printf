@@ -1,0 +1,49 @@
+NAME
+        printf
+LIBRARY
+        Standard C Library
+SYNOPSIS
+        #include <stdio.h>
+DESCRIPTION
+        The function printf() produce an output according to a format below.
+        Common conversion specifiers include:
+       - d, i : signed decimal integer
+       - u : unsigned decimal integer
+       - o : unsigned octal
+       - x, X : unsigned hexadecimal (lowercase/uppercase)
+       - f, F : floating-point decimal notation
+       - e, E : floating-point in scientific notation
+       - g, G : use shortest representation of f or e
+       - c : character
+       - s : string
+       - p : pointer address
+       - n : store number of characters written so far
+RETURN VALUE
+       Upon successful return, these functions return the number of bytes
+       printed (excluding the null byte used to end output to strings).
+ERRORS
+ATTRIBUTES
+        printf()
+STANDARDS
+        printf()
+HISTORY
+        printf()
+CAVEATS
+        none
+BUGS
+        Code such as printf(foo); often indicates a bug, since foo may
+       contain a % character.  If foo comes from untrusted user input, it
+       may contain %n, causing the printf() call to write to memory and
+       creating a security hole.
+EXAMPLES
+        #include <stdio.h>
+
+
+int main(void)
+{
+    printf("Welcome to Holbertonsschool\n");
+    return 0;
+}
+SEE ALSO
+        none
+COLOPHON
