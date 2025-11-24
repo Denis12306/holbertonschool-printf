@@ -39,3 +39,5 @@ ex: int main ()
 %% print a percent sign (\% also works)
 
 Flowchart
+<img width="551" height="586" alt="Printf drawio" src="https://github.com/user-attachments/assets/49fef514-ff1c-4109-a05e-ea5e4ff8bb89" />
+
