@@ -26,6 +26,17 @@ ex: int main ()
     }
     /** it will print : Hello, i am a Holbertonschool student
 
+
+Flowchart
+
+<img width="551" height="586" alt="Printf drawio" src="https://github.com/user-attachments/assets/49fef514-ff1c-4109-a05e-ea5e4ff8bb89" />
+
+Man Page
+NAME printf(3)
+LIBRARY Standard C
+SYNOPSIS #include <stdio.h>
+DESCRIPTION The functions in the printf() family produce output according to a format as described below. The functions printf() and vprintf() write output to stdout, the standard output stream; fprintf() and vfprintf() write output to the given output stream; sprintf(),
+snprintf(), vsprintf(), and vsnprintf() write to the character string str.
 %c print a single character
 %d print a decimal (base 10) number
 %e print an exponential floating-point number
@@ -38,11 +49,5 @@ ex: int main ()
 %x print a number in hexidecimal (base 16)
 %% print a percent sign (\% also works)
 
-Flowchart
 
-<img width="551" height="586" alt="Printf drawio" src="https://github.com/user-attachments/assets/49fef514-ff1c-4109-a05e-ea5e4ff8bb89" />
 
-Man Page
-NAME printf(3)
-LIBRARY Standard C
-SYNOPSIS #include <stdio.h>
