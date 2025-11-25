@@ -1,0 +1,10 @@
+#include <stdio>
+#include <main.h>
+#include <stdarg.h>
+/**
+ * printf - a function that print an input format
+ * format is a character string
+ * Return : the number of characters printed
+ */
+int _printf(const char *format, ...)
+{
