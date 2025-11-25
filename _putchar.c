@@ -1,5 +1,5 @@
 #include <unistd.h>
-
+#include <stdio.h>
 /**
  * The putchar function in C writes a single character to the standard output
  * (usually the console) and returns the character written or EOF on error.
