@@ -41,7 +41,8 @@ Hello, I am a Holberton School student
 ---
 
 ## 📊 Flowchart
-<img width="551" height="586" alt="Printf flowchart" src="https://github.com/user-attachments/assets/49fef514-ff1c-4109-a05e-ea5e4ff8bb89" />
+
+<img width="571" height="741" alt="Printf2 drawio" src="https://github.com/user-attachments/assets/327c14da-f837-4a72-9881-ed04970383b4" />
 
 ---
 
