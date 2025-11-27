@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <unistd.h>
 #include "main.h"
 /**
  * multiple function to create the different format
@@ -7,9 +8,9 @@
  */
 int (*function_library(char format_specifier))(va_list)
 {
-	format array[] = {
+	f_spe array[] = {
 		{"c", print_character},
-		{"s", print_string},
+		{"s", print_strings},
 		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
@@ -34,7 +35,7 @@ int (*function_library(char format_specifier))(va_list)
  * _putchar - a function that display the input
  * Return 1 if error
  */
-int _putchar(c)
+int _putchar(char c)
 {
 	if (write(1, &c, 1) != 1)
 		return (-1);
@@ -65,6 +66,7 @@ int print_string(va_list args)
 
 	if (!str)
 	str = "(null)";
+
 	while (str[i])
 	{
 		_putchar(str[i]);

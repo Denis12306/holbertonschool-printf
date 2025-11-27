@@ -13,10 +13,11 @@
  int print_character(va_list args);
  int print_integer(va_list args);
  int (*function_library(char s))(va_list);
+int print_percent(va_list args);
 
- typedef struct format_specifier
+ typedef struct f_spe
  {
-	 char *format;
+	 char *specifier;
 	 int (*function)(va_list args);
  } f_spe;
 
