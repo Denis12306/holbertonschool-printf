@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <unistd.h>
 #include 'main.h'
 /**
  * multiple function to create the different format
@@ -47,7 +48,7 @@ int _putchar(c)
  */
 int print_character(va_list args)
 {
-	char c = va_arg(arg, int);
+	char c = va_arg(args, int);
 
 	_putchar(c);
 	return (1);
@@ -65,9 +66,9 @@ int print_string(va_list args)
 
 	if (!str)
 	str = "(null)";
-	while (sr[i])
+	while (str[i])
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
 	return (i);
@@ -88,7 +89,7 @@ int print_integer(va_list args)
 		if (n < 0)
 		{
 			_putchar('-');
-			count++
+			count++;
 			num = -(long)n;
 		}
 		else
@@ -101,7 +102,7 @@ int print_integer(va_list args)
 		{
 			_putchar((num / diviser) % 10 + '0');
 			count++;
-			divise /= 10;
+			diviser /= 10;
 		}
 		return (count);
 }
