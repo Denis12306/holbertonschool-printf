@@ -1,11 +1,11 @@
 #include <stdarg.h>
-#include 'main.h'
+#include "main.h"
 /**
  * multiple function to create the different format
  * Return the inuput or NULL
  *
  */
-int (*function_library(char format_specifier))(va_list))
+int (*function_library(char format_specifier))(va_list)
 {
 	format array[] = {
 		{"c", print_character},
