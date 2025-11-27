@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef main_h
+#define main_h
 #include <stdarg.h>
 /**
  * struct format-specifier - type of specifier in input
@@ -13,7 +13,6 @@
  int print_character(va_list args);
  int print_integer(va_list args);
  int (*function_library(char s))(va_list);
-int print_percent(va_list args);
 
  typedef struct f_spe
  {
