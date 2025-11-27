@@ -16,5 +16,5 @@ int print_strings(va_list args);
 int _printf(const char *format, ...);
 int print_character(va_list args);
 int print_integer(va_list args);
-int (*function_library(char format_specifier))(va_list));
-#end
+int (*function_library(char s))(va_list));
+#endif
