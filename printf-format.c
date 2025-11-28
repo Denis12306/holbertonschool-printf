@@ -11,7 +11,6 @@ int (*function_library(char format_specifier))(va_list)
 	f_spe array[] = {
 		{"c", print_character},
 		{"s", print_strings},
-		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
 		{NULL, NULL}
@@ -32,17 +31,6 @@ int (*function_library(char format_specifier))(va_list)
 }
 
 /**
- * _putchar - a function that display the input
- * Return 1 if error
- */
-int _putchar(char c)
-{
-	if (write(1, &c, 1) != 1)
-		return (-1);
-	return (1);
-}
-
-/**
  * print_character - a function that print character
  * Return 1
  */
@@ -59,7 +47,7 @@ int print_character(va_list args)
  *
  * Return the number of i character
  */
-int print_string(va_list args)
+int print_strings(va_list args)
 {
 	char *str = va_arg(args, char*);
 	int i = 0;
