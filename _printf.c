@@ -6,14 +6,14 @@
  * it allows us to display the input in the output
  *
  */
-
 int _printf(const char *format, ...)
 {
     va_list args;
     const char *p;
+    int count = 0;
 
     if (format == NULL)
-        return (0);
+        return (-1);
 
     va_start(args, format);
 
@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
         if (*p != '%')
         {
             _putchar(*p);
+            count++;
         }
         else
         {
@@ -31,25 +32,24 @@ int _printf(const char *format, ...)
             p++;
 
             if (*p == '\0')
-                break;
+                return (-1);
 
             if (*p == 'c')
             {
                 char c = (char)va_arg(args, int);
-
                 _putchar(c);
+                count++;
             }
             else if (*p == 's')
             {
                 char *s = va_arg(args, char *);
-
                 if (s == NULL)
                     s = "(null)";
 
-                while (*s != '\0')
+                while (*s)
                 {
-                    _putchar(*s);
-                    s++;
+                    _putchar(*s++);
+                    count++;
                 }
             }
             else if (*p == 'd' || *p == 'i')
@@ -59,7 +59,8 @@ int _printf(const char *format, ...)
                 if (n < 0)
                 {
                     _putchar('-');
-                    num = (unsigned int)(-n);
+                    count++;
+                    num = (unsigned int)(-(long)n);
                 }
                 else
                 {
@@ -69,38 +70,40 @@ int _printf(const char *format, ...)
                 if (num == 0)
                 {
                     _putchar('0');
+                    count++;
                 }
                 else
                 {
-                    char digits[10];
+                    char digits[12];
                     int i = 0;
 
                     while (num != 0)
                     {
-                        digits[i] = (num % 10) + '0';
-                        num = num / 10;
-                        i++;
+                        digits[i++] = (num % 10) + '0';
+                        num /= 10;
                     }
 
-                    while (i > 0)
+                    while (i--)
                     {
-                        i--;
                         _putchar(digits[i]);
+                        count++;
                     }
                 }
             }
             else if (*p == '%')
             {
                 _putchar('%');
+                count++;
             }
             else
             {
                 _putchar('%');
                 _putchar(*p);
+                count += 2;
             }
         }
     }
 
     va_end(args);
-    return (0);
+    return (count);
 }
